@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-17 15:22:20.371494",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hx2c"
+ ],
+  "fields": [
+    {"label": "Customer", "fieldname": "customer", "fieldtype": "Link", "options": "Customer","reqd":1},
+    {"label": "Free Service", "fieldname": "free_service", "fieldtype": "Check", "default": 0,"read_only":1,"hidden":0},
+    {"label": "Visit Count", "fieldname": "visit_count", "fieldtype": "Int","read_only":1,"hidden":0},
+    {"label": "Status", "fieldname": "status", "fieldtype": "Select", "options": "Draft\nIn Progress\nCompleted","reqd":1},
+    {"label": "Vehicle Number", "fieldname": "vehicle_number", "fieldtype": "Data"},
+    {"label": "Vehicle Type", "fieldname": "vehicle_type", "fieldtype": "Select", "options": "Car\nBike\nSUV\nTruck"},
+    {"label": "Service Type", "fieldname": "service_type", "fieldtype": "Select", "options": "Wash\nPolish\nFull Service"},
+    {"label": "Service DateTime", "fieldname": "service_datetime", "fieldtype": "Datetime","reqd":1},
+    {"label": "Attendant", "fieldname": "attendant", "fieldtype": "Link", "options": "Employee"},
+    {"label": "Amount Charged", "fieldname": "amount_charged", "fieldtype": "Currency"},
+    {"label": "Payment Status", "fieldname": "payment_status", "fieldtype": "Select", "options": "Paid\nUnpaid","reqd":1},
+    {"label": "Notes", "fieldname": "notes", "fieldtype": "Small Text"},
+    {"label": "Services", "fieldname": "Services", "fieldtype": "Table","options":"Subscription Plan Detail"}
+   
+  ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-07-17 15:22:20.371494",
+ "modified_by": "Administrator",
+ "module": "Flipwash",
+ "name": "Vehicle Wash Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

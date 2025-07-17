@@ -242,3 +242,6 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+after_install = [
+                  "flipwash.flipwash.api.Add_on_subscription_plan.create_all_groups_items_and_plans"
+]
