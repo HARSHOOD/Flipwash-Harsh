@@ -1,0 +1,24 @@
+[
+    {
+        "doctype": "Custom Field",
+        "dt": "User",
+        "fieldname": "company",
+        "label": "Company",
+        "fieldtype": "Link",
+        "options": "Company",
+        "insert_after": "username",
+        "module": "flipwash",
+        "name": "user-company", 
+        "reqd":1
+    },
+    {
+        "doctype": "Custom Field",
+        "dt": "Company",
+        "fieldname": "state",
+        "label": "State",
+        "fieldtype": "Data",
+        "insert_after": "country",
+        "module": "flipwash",
+        "name": "company-state"
+    }
+]
