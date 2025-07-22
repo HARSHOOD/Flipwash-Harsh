@@ -241,7 +241,21 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+ 
+fixtures = ["Custom Field"]
 
-after_install = [
-                  "flipwash.flipwash.api.Add_on_subscription_plan.create_all_groups_items_and_plans"
-]
+# after_install = [ 
+#                   "flipwash.flipwash.api.Add_on_subscription_plan.create_all_groups_items_and_plans",
+#                     "flipwash.flipwash.api.create_companies.update_company_field_in_employee",
+#                     "flipwash.flipwash.api.roles_and_permission.create_franchise_role"
+
+# ]
+doctype_js = {
+    "Campaign": "public/js/campaign.js"
+}
+doc_events = {
+    "User": {
+        "before_insert": "flipwash.api.roles_and_permission.before_insert_user",
+        "after_insert": "flipwash.api.roles_and_permission_hooks.after_insert_user"
+    }
+}
