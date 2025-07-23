@@ -244,18 +244,21 @@ app_license = "mit"
  
 fixtures = ["Custom Field"]
 
-# after_install = [ 
-#                   "flipwash.flipwash.api.Add_on_subscription_plan.create_all_groups_items_and_plans",
-#                     "flipwash.flipwash.api.create_companies.update_company_field_in_employee",
-#                     "flipwash.flipwash.api.roles_and_permission.create_franchise_role"
+after_install = [ 
+                    "flipwash.flipwash.api.Add_on_subscription_plan.create_all_groups_items_and_plans",
+                    "flipwash.flipwash.api.create_companies.update_company_field_in_employee"
+] 
 
-# ]
+
+
 doctype_js = {
     "Campaign": "public/js/campaign.js"
 }
+
+
 doc_events = {
     "User": {
-        "before_insert": "flipwash.api.roles_and_permission.before_insert_user",
-        "after_insert": "flipwash.api.roles_and_permission_hooks.after_insert_user"
+        "before_insert": "flipwash.flipwash.api.roles_and_permission.before_insert_user",
+        "after_insert": "flipwash.flipwash.api.roles_and_permission.after_insert_user"
     }
 }
