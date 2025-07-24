@@ -1,0 +1,24 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Employee",
+    "module": "flipwash",
+    "fieldname": "training_program_section",
+    "label": "Training Programs",
+    "fieldtype": "Section Break",
+    "insert_after": "grade",
+    "name": "employee-training_program_section"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Employee",
+    "module": "flipwash",
+    "fieldname": "training_programs",
+    "label": "Training Programs",
+    "fieldtype": "Table",
+    "options": "Employee Training Table",
+    "insert_after": "training_program_section",
+    "reqd": 0,
+    "name": "employee-training_programs"
+  }
+]

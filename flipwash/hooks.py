@@ -260,5 +260,8 @@ doc_events = {
     "User": {
         "before_insert": "flipwash.flipwash.api.roles_and_permission.before_insert_user",
         "after_insert": "flipwash.flipwash.api.roles_and_permission.after_insert_user"
-    }
+    },
+    "Employee":{ 
+                "after_insert": "flipwash.flipwash.api.add_training_program_in_employee.add_training_programs_to_employee"
+        }
 }
